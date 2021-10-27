@@ -22,7 +22,7 @@ import io
 import os
 
 HOST_NAME = "0.0.0.0"
-PORT = 5001
+PORT = 5002
 SHARED: Dict[str, Any] = {}
 IMAGE_LOADER = None
 STYLE_SHEET = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"
