@@ -261,6 +261,7 @@ class MyHandler(BaseHTTPRequestHandler):
         ctype, pdict = cgi.parse_header(self.headers["content-type"])
         pdict["boundary"] = bytes(pdict["boundary"], "utf-8")
         postvars = cgi.parse_multipart(self.rfile, pdict)
+        print (postvars["image"][0])
         if postvars["image"][0].decode() != "":
             SHARED["dialog_history"] = []
             SHARED["image_feats"] = None
