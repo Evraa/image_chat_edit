@@ -227,7 +227,9 @@ class MyHandler(BaseHTTPRequestHandler):
             model act dictionary
         """
         reply = {}
+        
         reply["text"] = data["personality"][0].decode()
+        print(data)
         text = data["text"][0].decode()
         if text:
             reply["text"] = "\n".join(SHARED["dialog_history"] + [text, reply["text"]])
