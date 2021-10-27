@@ -342,6 +342,8 @@ if __name__ == "__main__":
 
     try:
         httpd.serve_forever()
+        print("Serving..")
     except KeyboardInterrupt:
         pass
     httpd.server_close()
+    print ("Closed.")
