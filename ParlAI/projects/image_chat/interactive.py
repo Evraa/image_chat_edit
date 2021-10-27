@@ -231,7 +231,8 @@ class MyHandler(BaseHTTPRequestHandler):
         # reply["text"] = data["personality"][0].decode()
         print(data)
         reply["text"] = data["personality"][0]
-        text = data["text"][0].decode()
+        # text = data["text"][0].decode()
+        text = data["text"][0]
         if text:
             reply["text"] = "\n".join(SHARED["dialog_history"] + [text, reply["text"]])
             SHARED["dialog_history"].append(text)
