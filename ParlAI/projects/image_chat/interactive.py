@@ -22,7 +22,7 @@ import io
 import os
 
 HOST_NAME = "0.0.0.0"
-PORT = 5002
+PORT = 3001
 SHARED: Dict[str, Any] = {}
 IMAGE_LOADER = None
 STYLE_SHEET = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"
@@ -344,8 +344,6 @@ if __name__ == "__main__":
         httpd.serve_forever()
         print("Serving..")
     except KeyboardInterrupt as e:
-        print("Exception happend!")
-        print(e)
         pass
     httpd.server_close()
     print ("Closed.")
